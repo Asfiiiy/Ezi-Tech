@@ -1,0 +1,778 @@
+/* General Styles */
+html, body {
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+}
+
+body {
+    font-family: Arial, sans-serif; /* Optional: Set a base font */
+}
+
+.list {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    background-color: blue;
+    color: white;
+    padding: 5px;
+    margin: 0; /* Remove default margin */
+}
+
+.list li {
+    padding: 10px;
+    flex: 1 1 auto;
+    box-sizing: border-box; /* Include padding and border in element's total width and height */
+}
+
+/* Background Image and Navbar */
+.bg-img {
+    background-image: url("coverr.jpg");
+    min-height: 680px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    padding: 20px;
+    box-sizing: border-box; /* Include padding in element's total width and height */
+}
+
+.container {
+    position: relative;
+    width: 100%;
+    max-width: 100%; /* Ensure container does not overflow */
+    box-sizing: border-box; /* Include padding in element's total width and height */
+}
+
+.topnav {
+    background-color: transparent;
+    display: flex; /* Ensure items are aligned */
+    flex-wrap: wrap; /* Allow wrapping */
+}
+
+.topnav a {
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 23px;
+    font-weight: bold;
+    box-sizing: border-box; /* Include padding in element's total width and height */
+}
+
+.topnav a:hover {
+    color: #5a31f0;
+    border-bottom: #5a31f0 solid 1px;
+}
+
+/* Text Styles */
+.text {
+    margin-top: 6rem;
+    text-align: center;
+    color: #f2f2f2;
+    font-size: 5rem;
+}
+
+#para, #para2 {
+    margin-top: 1rem;
+    text-align: center;
+    color: #f2f2f2;
+}
+
+#para {
+    font-size: 1.5rem;
+}
+
+#para2 {
+    font-size: 3rem;
+    font-weight: bolder;
+}
+
+/* Search Input */
+.search {
+    text-align: center;
+}
+
+input[type=text] {
+    padding: 6px;
+    border: none;
+    border-radius: 10px;
+    margin-top: 8px;
+    margin-right: 16px;
+    font-size: 30px;
+    box-sizing: border-box; /* Include padding in element's total width and height */
+    max-width: 100%; /* Ensure it does not overflow */
+}
+
+/* Media Queries */
+@media (max-width: 1200px) {
+    .text {
+        font-size: 4rem;
+    }
+
+    #para {
+        font-size: 1.25rem;
+    }
+
+    #para2 {
+        font-size: 2.5rem;
+    }
+
+    input[type=text] {
+        font-size: 25px;
+    }
+}
+
+@media (max-width: 992px) {
+    .text {
+        font-size: 3rem;
+    }
+
+    #para {
+        font-size: 1rem;
+    }
+
+    #para2 {
+        font-size: 2rem;
+    }
+
+    input[type=text] {
+        font-size: 20px;
+    }
+
+    .list {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+
+@media (max-width: 768px) {
+    .text {
+        font-size: 2.5rem;
+    }
+
+    #para {
+        font-size: 0.9rem;
+    }
+
+    #para2 {
+        font-size: 1.5rem;
+    }
+
+    input[type=text] {
+        font-size: 18px;
+        margin-right: 0;
+    }
+
+    .navbar-toggler {
+        margin-left: auto;
+    }
+}
+
+@media (max-width: 576px) {
+    .text {
+        font-size: 2rem;
+    }
+
+    #para {
+        font-size: 0.8rem;
+    }
+
+    #para2 {
+        font-size: 1.2rem;
+    }
+
+    input[type=text] {
+        font-size: 16px;
+        width: 100%;
+        margin-top: 5px;
+    }
+
+    .list {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .list li {
+        text-align: center;
+    }
+}
+
+
+/* ///////// 3 images  */
+
+/* Grid Container */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px; /* Adds spacing between grid items */
+    padding: 10px; /* Adds padding around the grid container */
+    box-sizing: border-box; /* Includes padding in container's total width and height */
+}
+
+/* Grid Item */
+.grid-item {
+    padding: 5px;
+    box-sizing: border-box; /* Includes padding in element's total width and height */
+}
+
+/* Image Styling */
+.grid-item img {
+    width: 80%; /* Makes images smaller, adjust as needed */
+    height: 60%; /* Maintains aspect ratio */
+    display: block; /* Removes bottom margin/whitespace */
+    margin: 0 auto; /* Center images within grid items */
+}
+
+/* Media Queries */
+@media (max-width: 1200px) {
+    .grid-container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .grid-item img {
+        width: 70%; /* Smaller images on medium screens */
+    }
+}
+
+@media (max-width: 992px) {
+    .grid-container {
+        grid-template-columns: repeat(2, 1fr); /* Two columns on medium screens */
+    }
+
+    .grid-item img {
+        width: 60%; /* Smaller images on smaller screens */
+    }
+}
+
+@media (max-width: 768px) {
+    .grid-container {
+        grid-template-columns: 1fr; /* One column on smaller screens */
+    }
+
+    .grid-item img {
+        width: 50%; /* Smaller images on very small screens */
+    }
+}
+
+
+/* /////////////////// cards/////////////////////// */
+
+/* Grid Container */
+.grid-containerr {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr); /* Default: 6 columns */
+    gap: 20px; /* Adds spacing between grid items */
+    padding: 10px; /* Optional: Adds padding around the grid container */
+    margin: 0 auto; /* Centers the grid container */
+    width: 100%; /* Full width of the container */
+    box-sizing: border-box; /* Includes padding in container's total width and height */
+}
+
+/* Grid Item */
+.grid-items {
+    padding: 5px;
+    box-sizing: border-box; /* Includes padding in element's total width and height */
+}
+
+/* Image Styling */
+.grid-items img {
+    width: 100%; /* Makes image responsive */
+    height: auto; /* Maintains aspect ratio */
+    display: block; /* Removes bottom margin/whitespace */
+    max-width: 80px; /* Optional: Adjusts maximum width of images */
+}
+
+/* Card Styling */
+.grid-items .cardd {
+    text-align: center;
+    margin-top: 10px;
+    height: 200px; /* Allows height to adjust based on content */
+    border-radius: 10px;
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px;
+}
+
+/* Centering Content */
+.centered {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Text Styling */
+.text-centerr p {
+    text-align: center;
+    font-weight: bold;
+    margin-top: 1rem;
+}
+
+/* Media Queries */
+@media (max-width: 1200px) {
+    .grid-containerr {
+        grid-template-columns: repeat(4, 1fr); /* 4 columns on medium screens */
+    }
+
+    .grid-items img {
+        max-width: 60px; /* Adjusts image size */
+    }
+}
+
+@media (max-width: 992px) {
+    .grid-containerr {
+        grid-template-columns: repeat(3, 1fr); /* 3 columns on smaller screens */
+    }
+
+    .grid-items img {
+        max-width: 50px; /* Adjusts image size */
+    }
+}
+
+@media (max-width: 768px) {
+    .grid-containerr {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns on very small screens */
+    }
+
+    .grid-items img {
+        max-width: 40px; /* Adjusts image size */
+    }
+}
+
+@media (max-width: 576px) {
+    .grid-containerr {
+        grid-template-columns: 1fr; /* 1 column on extra small screens */
+    }
+
+    .grid-items img {
+        max-width: 30px; /* Adjusts image size */
+    }
+}
+
+
+/* /////////////// Stylish Cards ///////////////// */
+
+/* Grid Container */
+.containeer-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Default: 2 columns */
+    gap: 20px; /* Adds spacing between grid items */
+    padding: 10px; /* Optional: Adds padding around the grid container */
+    box-sizing: border-box; /* Includes padding in container's total width and height */
+}
+
+/* Grid Item */
+.grid-itemss {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    /* border: 1px solid black; */
+    box-sizing: border-box; /* Includes padding in element's total width and height */
+}
+
+/* Card Styling */
+.card {
+    width: 100%; /* Full width of the grid item */
+    max-width: 380px; /* Optional: Sets a maximum width */
+    height: auto; /* Adjusts height based on content */
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    background: #fff;
+    transition: all 0.5s ease;
+    cursor: pointer;
+    user-select: none;
+    overflow: hidden;
+    margin: 0 auto; /* Centers the card */
+}
+
+/* Card Hover Effect */
+.card:hover {
+    color: #fff;
+    transform: scale(1.025);
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 5px 10px;
+}
+
+.card:hover .backgroundEffect {
+    bottom: 0;
+    height: 320px;
+    width: 100%;
+    position: absolute;
+    z-index: -1;
+    background: #1b9ce3;
+    animation: popBackground 0.3s ease-in;
+}
+
+/* Background Animation */
+@keyframes popBackground {
+    0% {
+        height: 20px;
+        border-top-left-radius: 50%;
+        border-top-right-radius: 50%;
+    }
+    50% {
+        height: 80px;
+        border-top-left-radius: 75%;
+        border-top-right-radius: 75%;
+    }
+    75% {
+        height: 160px;
+        border-top-left-radius: 85%;
+        border-top-right-radius: 85%;
+    }
+    100% {
+        height: 320px;
+        border-top-left-radius: 100%;
+        border-top-right-radius: 100%;
+    }
+}
+
+/* Picture Styling */
+.card .pic {
+    position: relative;
+}
+
+.card .pic img {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+}
+
+/* Date Styling */
+.card .date {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 70px;
+    background-color: #1b9ce3;
+    color: white;
+    position: absolute;
+    bottom: 0px;
+}
+
+/* Date Text */
+.card .date .day {
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.card .date .month,
+.card .date .year {
+    font-size: 10px;
+}
+
+/* Content Styling */
+.card .content {
+    padding: 0 20px;
+}
+
+.card .content .btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px 10px;
+    background-color: #1b9ce3;
+    border-radius: 25px;
+    font-size: 12px;
+    border: none;
+}
+
+.card:hover .content .btn {
+    background: #fff;
+    color: #1b9ce3;
+    box-shadow: #0000001a 0px 3px 5px;
+}
+
+.card .content .btn .fas {
+    font-size: 10px;
+    padding-left: 5px;
+}
+
+.card .content .foot .admin {
+    color: #1b9ce3;
+    font-size: 12px;
+}
+
+.card:hover .content .foot .admin {
+    color: #fff;
+}
+
+.card .content .foot .icon {
+    font-size: 12px;
+}
+.content p:hover {
+   
+        color: #ffffff !important; /* Maintain white text on hover */
+        text-decoration: none; /* Optional: Remove underline on hover */
+   
+}
+
+/* Media Queries */
+@media (max-width: 1200px) {
+    .containeer-grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns on medium screens */
+    }
+}
+
+@media (max-width: 992px) {
+    .containeer-grid {
+        grid-template-columns: repeat(1, 1fr); /* 1 column on smaller screens */
+    }
+
+    .card {
+        max-width: 100%; /* Full width of the grid item */
+    }
+}
+
+@media (max-width: 768px) {
+    .card .pic img {
+        height: 200px; /* Adjust image height */
+    }
+}
+
+@media (max-width: 576px) {
+    .card .pic img {
+        height: 180px; /* Further adjust image height for extra small screens */
+    }
+}
+
+/* Heading Styling */
+.h1 {
+    margin-top: 4rem; /* Adjust top margin */
+}
+
+/* //////////////////////// 6 cards ////////////////////////// */
+
+/* Grid Container */
+.grid-containeri {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Default: 3 columns */
+    gap: 1rem; /* Space between grid items */
+    padding: 10px; /* Optional: Adds padding around the grid container */
+    box-sizing: border-box; /* Includes padding in container's total width and height */
+}
+
+/* Grid Item */
+.grid-itemi {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+/* Card Styling */
+.cardq {
+    width: 100%; /* Full width of the grid item */
+    max-width: 18rem; /* Optional: Sets a maximum width */
+    height: auto; /* Adjusts height based on content */
+    margin-bottom: 1rem;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    transition: all 0.3s ease;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.cardq:hover {
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 5px 10px;
+}
+
+/* Card Header */
+.cardq-header {
+    font-weight: bold;
+    background: #1b9ce3;
+}
+
+/* Card Body */
+.cardq-body {
+    padding: 1rem;
+}
+
+.cardq-texti {
+    border-bottom: #f2f2f2 2px solid;
+    margin-top: 10px;
+}
+
+/* Media Queries */
+@media (max-width: 1200px) {
+    .grid-containeri {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns on medium screens */
+    }
+}
+
+@media (max-width: 768px) {
+    .grid-containeri {
+        grid-template-columns: repeat(1, 1fr); /* 1 column on smaller screens */
+    }
+
+    .cardq {
+        max-width: 100%; /* Full width of the grid item */
+    }
+}
+
+@media (max-width: 576px) {
+    .cardq-body {
+        padding: 0.5rem; /* Adjust padding for smaller screens */
+    }
+}
+
+/* /////// image and text /////// */
+
+
+/* Grid Container */
+.grid-containerio {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr); /* Default: 1 column on smaller screens */
+    gap: 1rem; /* Space between grid items */
+    padding: 10px; /* Optional: Adds padding around the grid container */
+}
+
+/* Grid Item */
+.grid-itemio {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+/* Responsive Image */
+.responsive-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px; /* Optional: Rounds corners of the image */
+}
+
+/* Header Styling */
+.h2 {
+    margin-top: 20px; /* Reduced from 40% to fit better on different screens */
+    margin-bottom: 0;
+    font-size: 2rem; /* Reduced font size for responsiveness */
+}
+
+.pra {
+    margin-top: 0;
+    color: #fff;
+    margin-left: 0; /* Removed left margin for better alignment */
+    padding: 0 10px; /* Added padding for better text alignment */
+}
+
+/* Animations and Backgrounds */
+.anima {
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,113,121,0.5830707282913166) 35%, rgba(0,212,255,1) 100%);
+    border-radius: 20px;
+    padding: 20px; /* Added padding for spacing */
+}
+
+h1 {
+    color: hsl(236, 58%, 55%);
+    font-size: 2.5rem; /* Reduced font size for responsiveness */
+    font-weight: bold;
+    font-family: monospace;
+    letter-spacing: 2px; /* Reduced letter spacing for smaller screens */
+    cursor: pointer;
+}
+
+h1 span {
+    transition: 0.5s ease-out;
+}
+
+h1:hover span:nth-child(1) {
+    margin-right: 5px;
+}
+
+h1:hover span:nth-child(1):after {
+    content: "'";
+}
+
+h1:hover span:nth-child(2) {
+    margin-left: 30px;
+}
+
+h1:hover span {
+    color: #ffffff;
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 40px #fff;
+}
+
+/* Footer Section */
+.bgg-img {
+    background-image: url("footer.webp");
+    min-height: 300px; /* Adjusted height for better responsiveness */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: #5a31f0;
+    position: relative;
+    padding: 20px; /* Added padding for content spacing */
+}
+
+.conatanri {
+    position: absolute;
+    bottom: 20px;
+    width: 90%;
+    max-width: 1200px; 
+    margin: 0 auto;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.5); /* Optional: Background for better readability */
+    border-radius: 10px; /* Optional: Rounds corners */
+}
+
+/* Media Queries */
+@media (min-width: 768px) {
+    .grid-containerio {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns on medium screens */
+    }
+
+    .h2 {
+        font-size: 2.5rem; /* Adjusted font size */
+    }
+}
+
+@media (min-width: 992px) {
+    .grid-containerio {
+        grid-template-columns: repeat(2, 1fr); /* Keep 2 columns on larger screens */
+    }
+
+    .h2 {
+        font-size: 3rem; /* Larger font size on bigger screens */
+    }
+}
+
+
+/* ////////// Footer //////////////////// */
+
+.bg-dark-blue {
+    background-color: #1364c0; /* Dark blue background */
+  }
+  
+  .text-white a {
+    color: #ffffff !important; /* White text for links */
+  }
+
+  .text-white a:hover {
+    color: #dcdcdc !important; /* Light gray text on hover */
+    text-decoration: none; /* Remove underline on hover */
+  }
+  
+  .btn-flat {
+    border-radius: 50%;
+    border: none;
+    margin: 0 5px;
+  }
+  
+  .btn-dark {
+    background-color: #343a40;
+    color: #ffffff;
+  }
+  
+  @media (max-width: 768px) {
+    .page-footer .container {
+      width: 100% !important;
+      padding: 0 15px;
+    }
+    .page-footer .row > div {
+      text-align: center;
+      margin-bottom: 1rem;
+    }
+  }
